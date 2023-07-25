@@ -21,6 +21,22 @@
 </head>
 <body class="hold-transition register-page">
 
+<?php
+    $mysqli = new mysqli("localhost", "root", "", "db_bskciampea");
+
+    if (isset($_POST['btnSimpan'])) {
+        $nik = $_POST['nik'];
+        $nama = $_POST['nama'];
+        $no_telp = $_POST['no_telp'];
+        $alamat = $_POST['alamat'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $result = mysqli_query($mysqli, "INSERT INTO tb_users (nik, nama, no_telp, alamat, email, password) VALUES ('$nik', '$nama', '$no_telp', '$alamat', '$email', '$password')");
+        header("Location: register.php");
+    }
+?>
+
+
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -58,25 +74,25 @@
 
         <div class="row g-0">
               <div class="col-lg-12 ml-5 reservation-form-bg">
-                <form action="front-end-assets/forms/book-a-table.php" method="post" role="form" class="php-email-form">
+                <form action="register.php" method="post" role="form" class="php-email-form">
                   <div class="row gy-4">
                       <form action="#" class="signin-form">
                         <div class="col-lg-6">
                             <div class="form-group mb-2">
-                              <label class="label" for="NIK">NIK</label>
-                              <input type="number" class="form-control" placeholder="32011xxxxxxx" required>
+                              <label class="label" for="nik">NIK</label>
+                              <input type="number" class="form-control" name="nik" placeholder="32011xxxxxxx" required>
                             </div>
                             <div class="form-group mb-2">
                               <label class="label" for="name">Nama</label>
-                              <input type="text" class="form-control" placeholder="Nama" required>
+                              <input type="text" class="form-control" name="nama" placeholder="Nama" required>
                             </div>
                             <div class="form-group mb-2">
-                              <label class="label" for="Nomor">No Telpon</label>
-                              <input type="number" class="form-control" placeholder="0812xxxxx" required>
+                              <label class="label" for="no_telp">No Telpon</label>
+                              <input type="number" class="form-control" name="no_telp" placeholder="0812xxxxx" required>
                             </div>
                             <div class="form-group mb-2">
                               <label class="label" for="Alamat">Alamat</label>
-                              <input type="text" class="form-control" placeholder="Jlnxxx" required>
+                              <input type="text" class="form-control" name="alamat" placeholder="Jlnxxx" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -86,20 +102,21 @@
                             </div>
                             <div class="form-group mb-2">
                               <label class="label" for="email">Email</label>
-                              <input type="email" class="form-control" placeholder="Email" required>
+                              <input type="email" class="form-control" name="email" placeholder="Email" required>
                             </div>
                             <div class="form-group mb-2">
                               <label class="label" for="password">Password</label>
-                              <input type="password" class="form-control" placeholder="Password" required>
+                              <input type="password" class="form-control" name="password" placeholder="Password" required>
                             </div>
                             <div class="form-group mb-4">
-                              <label class="label" for="password">Confirm Password</label>
-                              <input type="password" class="form-control" placeholder="Password" required>
+                              <label class="label">Confirm Password</label>
+                              <input type="password" class="form-control" placeholder="Confirm Password" required>
                             </div>
                         </div>
                         <center>
                           <div class="form-group w-75 text-center">
-                              <button type="submit" class="form-control btn rounded submit px-3 text-center">Daftar</button>
+                              <button type="submit" class="form-control btn rounded submit px-3 text-center" name="btnSimpan" id="btnSimpan">Daftar</button>
+                              
                           </div>
                         </center>
                       </form>

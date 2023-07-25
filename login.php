@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bank Sampah | Pendaftaran</title>
+  <title>Bank Sampah | Masuk</title>
   <?php
   include "layout_head_and_footer/head.php";
 ?>
@@ -62,25 +62,25 @@
 
 
               <div class="col-lg-7 ml-5 d-flex align-items-center reservation-form-bg">
-                <form action="front-end-assets/forms/book-a-table.php" method="post" role="form" class="php-email-form">
-                  <div class="row gy-4">
-                    <form action="#" class="signin-form">
-                      <div class="form-group mb-2">
-                        <label class="label" for="name">Username</label>
-                        <input type="text" class="form-control" placeholder="Username" required>
-                      </div>
-                      <div class="form-group mb-2">
-                        <label class="label" for="password">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" required>
-                      </div>
-                      <div class="form-group">
-                        <button type="submit" class="form-control btn btn-primary rounded submit px-3">Masuk</button>
-                        <a  href="#">lupa kata sandi?</a>
-                        <p class="text-center">Apakah ingin mendaftar? <a href="register.php">Klik disini</a></p>
-                      </div>
-                    </form>
-                  </div>
-                </form>
+                <form action="action/cek_login.php" method="post" class="php-email-form">
+                    <div class="row gy-4">
+                      <form action="#" class="signin-form">
+                        <div class="form-group mb-2">
+                          <label class="label" for="name">Masukan NIK / Kode Admin</label>
+                          <input type="text" name="user" autocomplete="off" class="form-control" placeholder="32011xxxxxxxxxxx" required>
+                        </div>
+                        <div class="form-group mb-2">
+                          <label class="label" for="password">Password</label>
+                          <input type="password" name="pass" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" name="login" value="Login" class="form-control btn btn-primary rounded submit px-3">Masuk</button>
+                          <a  href="#">lupa kata sandi?</a>
+                          <p class="text-center">Apakah ingin mendaftar? <a href="register.php">Klik disini</a></p>
+                        </div>
+                      </form>
+                    </div>
+                  </form>
               </div>
 
         </div>

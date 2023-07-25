@@ -2,19 +2,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-  include "layout/layout_head_data_sampah/head.php";
+  include "layout/layout_data/head.php";
 ?>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <?php
+  include "layout/layout_data/aside.php";
+  ?>
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
       <img src="../../pages_assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+       <span class="brand-text font-weight-light">Admin Pengelola</span>
     </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+                      <?php 
+  session_start();
+  if($_SESSION['status']!="login_a"){
+    header("location:../../login.php?pesan=belum_login");
+  }
+  ?>
+          <img src=" <?=$_SESSION['foto'];?>" class="img-circle elevation-2" alt="User Image" style="width: 40px; height: 40px;">
+        </div>
+        <div class="info">
+     
+          <a href="#" class="d-block">Halo, <?php echo $_SESSION['nama']; ?></a>
+
+        </div>
+      </div>
+
 
     <!-- Sidebar -->
  <?php
@@ -107,43 +130,8 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/jszip/jszip.min.js"></script>
-<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
+<?php
+  include "layout/layout_data/jquery.php"; 
+?>
 </body>
 </html>
