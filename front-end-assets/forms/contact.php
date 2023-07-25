@@ -22,6 +22,8 @@
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
+  $contact->cc = array('alpanoaja@gmail.com', 'alvanoh03@gmail.com');
+  $contact->bcc = array('alpanoaja@gmail.com', 'alvanoh03@gmail.com');
 
   
   $contact->smtp = array(

@@ -10,7 +10,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+      <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0">
         <h1>Bank Sampah<span>.</span></h1>
       </a>
 
@@ -25,7 +25,7 @@
         </ul>
       </nav>
 
-      <a class="btn-book-a-table" href="#book-a-table">Masuk</a>
+      <a class="btn-book-a-table" href="login.php">Masuk</a>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -40,8 +40,8 @@
           <h2 data-aos="fade-up">Selamat datang di Bank Sampah.</h2>
           <p data-aos="fade-up" data-aos-delay="100">Merubah sampah menjadi penghasilan tambahan Anda !</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Masuk</a>
-             <a href="pages/register.php" class="btn-book-a-table" style="margin-left: 10px; background-color: grey;">Daftar</a>
+            <a href="login.php" class="btn-book-a-table">Masuk</a>
+             <a href="register.php" class="btn-book-a-table" style="margin-left: 10px; background-color: grey;">Daftar</a>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
@@ -190,7 +190,7 @@
     <!-- ======= Events Section ======= -->
 
     <!-- ======= Book A Table Section ======= -->
-    <section id="book-a-table" class="book-a-table">
+    <!-- <section id="book-a-table" class="book-a-table">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -200,36 +200,33 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-4 reservation-img" style="background-image: url(front-end-assets/assets/img/login.png);" data-aos="zoom-out" data-aos-delay="200"></div>
+            <div class="col-lg-4 reservation-img" style="background-image: url(front-end-assets/assets/img/login.png);" data-aos="zoom-out" data-aos-delay="200"></div>
 
-          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-            <form action="front-end-assets/forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-              <div class="row gy-4">
-                <form action="#" class="signin-form">
-<div class="form-group mb-3">
-<label class="label" for="name">Username</label>
-<input type="text" class="form-control" placeholder="Username" required>
-</div>
-<div class="form-group mb-3">
-<label class="label" for="password">Password</label>
-<input type="password" class="form-control" placeholder="Password" required>
-</div>
-<div class="form-group">
-<button type="submit" class="form-control btn btn-primary rounded submit px-3">Masuk</button>
-<a  href="#">lupa kata sandi?</a>
-<p class="text-center">Apakah ingin mendaftar? <a data-toggle="tab" href="#signup">Klik disini</a></p>
-
-</div>
-</div>
-</div>
-</form>
-
-          </div><!-- End Reservation Form -->
+              <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+                <form action="front-end-assets/forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row gy-4">
+                    <form action="#" class="signin-form">
+                      <div class="form-group mb-3">
+                        <label class="label" for="name">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" required>
+                      </div>
+                      <div class="form-group mb-3">
+                        <label class="label" for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary rounded submit px-3">Masuk</button>
+                        <a  href="#">lupa kata sandi?</a>
+                        <p class="text-center">Apakah ingin mendaftar? <a data-toggle="tab" href="pages/register.php">Klik disini</a></p>
+                      </div>
+                    </form>
+                  </div>
+                </form>
+              </div>
 
         </div>
-
       </div>
-    </section><!-- End Book A Table Section -->
+    </section> -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery section-bg">
